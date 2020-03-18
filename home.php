@@ -125,6 +125,8 @@ get_header(); ?>
         <a href="<?=the_permalink()?>" class="saibamais">SAIBA MAIS</a>
       </div>
       <? endwhile; endif; ?>
+
+      <a href="" class="saibamais">VER MAIS</a>
     </div>
   </div>
 </section>
