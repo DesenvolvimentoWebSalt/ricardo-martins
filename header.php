@@ -29,9 +29,12 @@
   <link rel="icon" type="image/png" href="<?=get_template_directory_URI()?>/img/favicon.png" />
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
   <?php wp_head(); ?>
   <?php include "funcoesSalt.php";  ?>
+  <?php include "svg.php";  ?>
+  <?php include "background.php";  ?>
 
 </head>
 
@@ -50,7 +53,26 @@
   </script>
 
   <header class="header">
-    <div>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+    <div class="container">
+      <div class="header-wrapper">
+        <a href="<?=site_url()?>/">
+          <img src="<?=get_template_directory_URI();?>/img/rsc/logo.png" class="logo" />
+        </a>
+
+        <div class="menu-wrapper">
+          <?php wp_nav_menu( array( 
+            'menu_class' => 'nav-menu', 
+            'menu_id' => 'primary-menu', 
+            'sort_column' => 'menu_order' ) ); 
+          ?>
+
+          <a href="" class="wpp-header">
+            <svg width="32" height="32" viewBox="0 0 32 32">
+              <use xlink:href="#whatsapp"></use>
+            </svg>
+            <p>33 3333-3333</p>
+          </a>
+        </div>
+      </div>
     </div>
   </header>

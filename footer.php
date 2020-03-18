@@ -14,7 +14,7 @@
   <? // echo do_shortcode(''); ?>
 </footer>
 
-<script src="<?=get_template_directory_URI()?>/app/app.js"></script>
+<script src="<?=get_template_directory_URI()?>/app/app.js" type="module"></script>
 
 <?php wp_footer(); ?>
 
